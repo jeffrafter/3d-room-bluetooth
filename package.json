@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "noble-mac": "git+https://github.com/Timeular/noble-mac.git"
+    "noble-mac": "git+https://github.com/Timeular/noble-mac.git",
+    "node-bluetooth": "^1.2.5"
   }
 }

@@ -1,8 +1,21 @@
 const noble = require("noble-mac");
 
+const servicesDiscovered = (peripheral) => {
+  return (services) => {
+    console.log(`services for ${peripheral.uuid}`)
+    console.log({ services })
+  }
+}
+
 noble.on("discover", peripheral => {
+  console.log("------------------- NEW PERIPHERAL -------------------------")
   console.log({ peripheral });
-  noble.stopScanning(); // any service UUID, no duplicates
+
+  peripheral.once('servicesDiscover', servicesDiscovered(peripheral))
+
+  peripheral.discoverServices()
+
+  // noble.stopScanning(); // any service UUID, no duplicates
 });
 
 noble.on("warning", message => {

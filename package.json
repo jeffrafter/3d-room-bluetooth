@@ -1,0 +1,15 @@
+{
+  "name": "bluetooth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node try.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "noble-mac": "git+https://github.com/Timeular/noble-mac.git"
+  }
+}
